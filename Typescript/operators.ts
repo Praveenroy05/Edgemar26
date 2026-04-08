@@ -162,3 +162,5 @@ let k = 10
 
 
 console.log("India" === "India");
+
+add(4,5)

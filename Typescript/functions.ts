@@ -115,7 +115,7 @@ fun(10,20,30) // This is how we call the function expression
 
 // 3. Arrow function (=>) - Lambda function - A function that uses the arrow syntax is called an arrow function. Arrow functions are a shorter syntax for writing functions. 
 
-function add (a,b){
+function add (a:number,b:number){
    //  return a+b
    console.log(a+b);
 };
