@@ -1,18 +1,26 @@
 import { test, expect } from '@playwright/test';
 
-test('has title', async ({ page }) => {
-  await page.goto('https://playwright.dev/');
+// page, browser - fixture - global object
+// context, request
+// async-await - goes together. async at function level and await at step level
 
-  // Expect a title "to contain" a substring.
-  await expect(page).toHaveTitle(/Playwright/);
-});
+test("Login validation", async function({page}){
 
-test('get started link', async ({ page }) => {
-  await page.goto('https://playwright.dev/');
+    // await Launch the url
+    // await fill the username
+    // await fill the password
+    // await click on  the login button
+    // await Validate if the login is successful
 
-  // Click the get started link.
-  await page.getByRole('link', { name: 'Get started' }).click();
+    await page.goto("https://practicetestautomation.com/practice-test-login/")
+    // await page.waitForTimeout(2000)
+    await page.locator("#username").fill("student")
+    await page.locator("#password").fill("Password123")
+    await page.locator("#submit").click()
+    await expect(page.locator("h1.post-title")).toContainText("Successfully")
 
-  // Expects page to have a heading with the name of Installation.
-  await expect(page.getByRole('heading', { name: 'Installation' })).toBeVisible();
-});
+
+})
+
+// JS & TS - Asynchronous
+
