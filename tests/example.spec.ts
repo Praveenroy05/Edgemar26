@@ -15,7 +15,7 @@ test("Login validation", async function({page}){
     await page.goto("https://practicetestautomation.com/practice-test-login/")
     // await page.waitForTimeout(2000)
     await page.getByLabel("Username").fill("student")
-    await page.locator("#password").fill("Password123")
+    await page.getByRole("textbox", {name:'Password'}).fill("Password123")
     await page.getByText("Submit", {exact:true}).nth(0).click()
     await expect(page.locator("h1.post-title")).toContainText("Successfully")
 
