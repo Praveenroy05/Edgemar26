@@ -28,3 +28,13 @@
 
 // 6. REPORT LAYER - HTML/Allure - We do not create it separately in playwright.
 
+
+
+
+// Hybrid Framework - POM - Data Driven testing 
+// BDD cucumber - Internally using the POM framework
+
+// .feature
+// stepDefinition
+
+// TDD - Test driven development - POM framework - 
