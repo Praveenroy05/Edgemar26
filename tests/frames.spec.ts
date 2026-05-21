@@ -45,7 +45,7 @@ test("Frames handling", async ({page})=>{
     await page.getByText("Home", {exact:true}).click()
     await expect(page.getByPlaceholder("Email id for Sign Up")).toBeVisible()
 
-
+    
 
 
 })
